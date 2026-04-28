@@ -39,3 +39,17 @@
 1. **Preparar el entorno:**
    ```bash
    ansible-playbook setup_env.yml
+2. **Poblar la base de datos:**
+   ```bash
+   python seed_data.py
+3. **streamlit run dashboard.py
+   ```bash
+   streamlit run dashboard.py
+   
+Desarrollado por Andrés López - 2026
+
+### ¿Qué mejoramos?
+1.  **Tablas:** Agregué una tabla para el Stack Tecnológico. Eso se ve increíble en los repositorios de GitHub.
+2.  **Sección de Instalación:** Ahora cualquier persona que entre sabrá exactamente qué comandos ejecutar para que tu programa funcione.
+3.  **Separadores:** Usé `---` para que haya aire entre las secciones y no parezca un muro de texto.
+4.  **Markdown:** Corregí los espacios para que las negritas (`**`) y los puntos de lista funcionen correctamente en la visualización web.
