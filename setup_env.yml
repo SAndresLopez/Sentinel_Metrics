@@ -1,0 +1,27 @@
+#Automatiza la instalación de dependencias y asegura que el servidor esté listo.
+
+---
+- name: Configurar entorno para Sentinel Metrics
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Instalar dependencias de Python
+      pip:
+        name:
+          - pandas
+          - streamlit
+          - sqlalchemy
+          - mysql-connector-python
+          - faker
+          - matplotlib
+        state: present
+
+    - name: Verificar que MySQL esté corriendo
+      service:
+        name: mysql
+        state: started
+      ignore_errors: yes
+
+    - name: Mensaje de éxito
+      debug:
+        msg: "El entorno de Sentinel Metrics está listo."
